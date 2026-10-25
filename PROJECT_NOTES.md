@@ -3,7 +3,7 @@
 ## Structure
 - `index.html` contains the homepage, CSS, and small vanilla JavaScript interactions.
 - `publications.html` is a standalone responsive Publications & Media page with category filters and links to original third-party sources.
-- `public/images/` contains the supplied portrait, speaking photo, and GHAA graphics.
+- `public/public/images/` contains the supplied portrait, speaking photo, and GHAA graphics.
 - Vercel serves the repository root as a static site. No build step or framework is required.
 
 ## Decisions
@@ -11,7 +11,7 @@
 - On mobile, the full navigation is available through an accessible menu toggle, keeping Home, About, Practice Areas, Leadership, Publications, and Contact available without squeezing them into the header.
 - External profile and contact links use clean text labels without decorative arrow glyphs.
 - The homepage navigation links to `publications.html`; the publications page links back to homepage sections and labels its content as a selected reference list, not an exhaustive catalogue.
-- The homepage hero uses the new professional barrister portrait from `public/images/Professional Barrister Portrait in Law Office.png`, fitted with `object-fit: contain` so the photo itself is not cropped.
+- The homepage hero uses the new professional barrister portrait from `public/public/images/Professional Barrister Portrait in Law Office.png`, fitted with `object-fit: contain` so the photo itself is not cropped.
 - Homepage hero uses three accessible rotating slides with 3-second intervals, manual controls, hover/focus pause, and reduced-motion support.
 - The five remaining gallery images display in a responsive mosaic without cropping source images. On small phones the gallery becomes a single-column list, with keyboard-accessible modal lightbox, caption, previous/next controls, Escape close, and focus return. The GHAA election campaign poster and low-quality `dev-kella-speaking.jpg` photo were removed from the gallery at the user's request; the replacement `Formal Namaste at a Conference.png` was reviewed and then removed at the user's request to keep the gallery to five images.
 - Practice areas use icon-led cards with details that expand on hover/focus on desktop and remain visible on touch layouts. Desktop uses a 2×2 grid, tablets use two columns, and small phones use a single-column card layout. The footer uses two columns on tablets/desktop and stacks on phones, with a separate disclaimer panel.
@@ -38,7 +38,7 @@
 
 
 ## Image and contact form fixes
-- Vercel serves files in the repository's `public/` directory from the URL root. All homepage image URLs now use `/images/...` instead of `/public/images/...`; spaces are percent-encoded in the image URLs.
+- Vercel serves files in the repository's `public/` directory from the URL root. All homepage image URLs now use `/public/images/...` instead of `/public/public/images/...`; spaces are percent-encoded in the image URLs.
 - Added graceful fallbacks for failed gallery and hero images, including a DK monogram placeholder.
 - Added intrinsic responsive sizing rules for images and loading/error handling. Existing hero image remains high-priority; gallery images remain lazy-loaded.
 - Added required Name, Email, Practice Area, and Message fields with client-side validation. Submission composes the enquiry and opens WhatsApp for user review and sending. This is not an email backend; a real email submission requires a configured Formspree/Resend endpoint.
