@@ -87,7 +87,47 @@
 @media(max-width:800px){.hero-carousel,.hero-slides,.hero-slide{min-height:0}.hero-slide .hero-grid{min-height:0;padding-top:40px;padding-bottom:85px}.hero-slide .hero-grid>div:first-child{order:1}.hero-visual{height:260px}.hero-controls{bottom:18px}.practice-card ul{max-height:none;opacity:1;transform:none}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:190px}.footer-top{grid-template-columns:1fr;gap:28px}.lightbox{padding:45px 45px 30px}.lightbox img{max-height:68vh}}
 @media(max-width:470px){.hero-slide .hero-grid{padding-top:28px}.hero-visual{height:210px}.hero-controls{gap:9px}.gallery{grid-auto-rows:165px}.lightbox{width:100vw;max-height:100dvh;padding:52px 40px 25px;border:0}.lightbox img{max-height:75vh}.lightbox-prev{left:5px}.lightbox-next{right:5px}}
 @media(prefers-reduced-motion:reduce){.hero-slide.is-active{animation:none}.practice-card ul{transition:none}}
-</style>
+
+/* Mobile layout and uncropped gallery media */
+.gallery figure img{object-fit:contain;object-position:center;background:#f1efe9}
+.gallery figure:nth-child(5n+1){grid-row:span 1}
+.gallery figure{min-height:0}
+@media(max-width:800px){
+ .hero-slide .hero-grid{gap:18px;padding-top:24px;padding-bottom:82px}
+ .hero-slide .portrait{min-height:0;padding:18px 0 42px}
+ .hero-slide .portrait-frame{width:min(100%,320px);aspect-ratio:4/3}
+ .hero-slide .portrait-note{right:calc(50% - 155px);bottom:0}
+ .hero-slide .orbit{width:280px;height:280px}
+ .hero-slide .hero-visual{height:230px}
+ .gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto;gap:10px}
+ .gallery figure{display:flex;flex-direction:column;grid-row:auto!important;min-height:0}
+ .gallery figure img{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain}
+ .gallery figcaption{position:static;background:#fff;color:var(--muted);padding:10px;font-size:11px;line-height:1.4}
+}
+@media(max-width:470px){
+ .navin{height:auto;min-height:66px;gap:8px;padding-top:8px;padding-bottom:8px;align-items:center}
+ .brand{gap:7px;flex:0 0 auto}
+ .brand strong{font-size:15px;white-space:nowrap}
+ .brand small{display:none}
+ .monogram{width:34px;height:38px;font-size:18px}
+ .links{flex:1;min-width:0;justify-content:flex-end;gap:7px;flex-wrap:wrap}
+ .links a{font-size:10px;white-space:nowrap}
+ .links a:nth-child(2){display:none}
+ .hero-slide .hero-grid{padding-top:18px;gap:12px}
+ .hero-slide .portrait{padding:12px 0 42px}
+ .hero-slide .portrait-frame{width:min(100%,290px);aspect-ratio:4/3}
+ .hero-slide .portrait-note{right:calc(50% - 145px);max-width:210px;padding:11px 13px;font-size:10px}
+ .hero-slide .orbit{width:250px;height:250px}
+ .hero-slide h1{font-size:clamp(37px,10vw,43px);line-height:1.08;margin:17px 0}
+ .hero-slide .hero-copy{font-size:14px;line-height:1.65}
+ .hero-slide .hero-tags{gap:7px;margin:18px 0 22px}
+ .hero-slide .tag{font-size:10px;padding:7px 9px}
+ .hero-controls{bottom:14px}
+ .gallery{grid-template-columns:1fr;grid-auto-rows:auto}
+ .gallery figure img{aspect-ratio:4/3}
+ .lightbox{padding:52px 38px 25px}
+}
+\n</style>
 </head>
 <body>
 <div class="topline"><div class="wrap"><span>Professional profile · Ahmedabad, Gujarat</span><span>Advocate · High Court of Gujarat</span></div></div>
@@ -122,7 +162,7 @@
  if(portrait&&frame&&!reduce&&window.matchMedia('(hover:hover) and (pointer:fine)').matches){portrait.addEventListener('pointermove',e=>{const r=portrait.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;frame.style.transform='rotateY('+(x*8)+'deg) rotateX('+(-y*6)+'deg) translateZ(5px)'});portrait.addEventListener('pointerleave',()=>{frame.style.transform=''})}
  document.querySelectorAll('.practice-card').forEach(card=>{if(reduce||!window.matchMedia('(hover:hover) and (pointer:fine)').matches)return;card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform='perspective(800px) rotateY('+(x*3)+'deg) rotateX('+(-y*3)+'deg) translateY(-3px)'});card.addEventListener('pointerleave',()=>card.style.transform='')});
  const heroSlides=[...document.querySelectorAll('[data-hero-slide]')],heroDots=[...document.querySelectorAll('#heroDots button')],heroCount=document.getElementById('heroCount');let heroIndex=0,heroTimer=null,heroHover=false,heroFocus=false;
-function showHero(n){heroIndex=(n+heroSlides.length)%heroSlides.length;heroSlides.forEach((s,i)=>{s.classList.toggle('is-active',i===heroIndex);s.setAttribute('aria-hidden',String(i!==heroIndex))});heroDots.forEach((d,i)=>d.setAttribute('aria-current',i===heroIndex?'true':'false'));heroCount.textContent='0'+(heroIndex+1)+' / 03'}function stopHero(){if(heroTimer){clearInterval(heroTimer);heroTimer=null}}function startHero(){stopHero();if(!reduce&&!heroHover&&!heroFocus)heroTimer=setInterval(()=>showHero(heroIndex+1),6000)}document.getElementById('heroPrev').addEventListener('click',()=>{showHero(heroIndex-1);startHero()});document.getElementById('heroNext').addEventListener('click',()=>{showHero(heroIndex+1);startHero()});heroDots.forEach((d,i)=>d.addEventListener('click',()=>{showHero(i);startHero()}));const hero=document.querySelector('.hero-carousel');hero.addEventListener('mouseenter',()=>{heroHover=true;stopHero()});hero.addEventListener('mouseleave',()=>{heroHover=false;startHero()});hero.addEventListener('focusin',()=>{heroFocus=true;stopHero()});hero.addEventListener('focusout',()=>{heroFocus=false;startHero()});showHero(0);startHero();
+function showHero(n){heroIndex=(n+heroSlides.length)%heroSlides.length;heroSlides.forEach((s,i)=>{s.classList.toggle('is-active',i===heroIndex);s.setAttribute('aria-hidden',String(i!==heroIndex))});heroDots.forEach((d,i)=>d.setAttribute('aria-current',i===heroIndex?'true':'false'));heroCount.textContent='0'+(heroIndex+1)+' / 03'}function stopHero(){if(heroTimer){clearInterval(heroTimer);heroTimer=null}}function startHero(){stopHero();if(!reduce&&!heroHover&&!heroFocus)heroTimer=setInterval(()=>showHero(heroIndex+1),3000)}document.getElementById('heroPrev').addEventListener('click',()=>{showHero(heroIndex-1);startHero()});document.getElementById('heroNext').addEventListener('click',()=>{showHero(heroIndex+1);startHero()});heroDots.forEach((d,i)=>d.addEventListener('click',()=>{showHero(i);startHero()}));const hero=document.querySelector('.hero-carousel');hero.addEventListener('mouseenter',()=>{heroHover=true;stopHero()});hero.addEventListener('mouseleave',()=>{heroHover=false;startHero()});hero.addEventListener('focusin',()=>{heroFocus=true;stopHero()});hero.addEventListener('focusout',()=>{heroFocus=false;startHero()});showHero(0);startHero();
 const gallery=document.getElementById('photoGallery'),lightbox=document.getElementById('photoLightbox'),lightboxImage=document.getElementById('lightboxImage'),lightboxCaption=document.getElementById('lightboxCaption'),lightboxCounter=document.getElementById('lightboxCounter');let photoIndex=0,returnFocus=null;
 if(gallery){const figures=[...gallery.querySelectorAll('figure')];figures.forEach((fig,i)=>{fig.tabIndex=0;fig.setAttribute('role','button');fig.setAttribute('aria-label','View photo: '+fig.querySelector('figcaption').textContent);fig.addEventListener('click',()=>openPhoto(i));fig.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openPhoto(i)}})});function openPhoto(i){photoIndex=(i+figures.length)%figures.length;returnFocus=document.activeElement;updatePhoto();if(!lightbox.open)lightbox.showModal();document.getElementById('lightboxClose').focus()}function updatePhoto(){const img=figures[photoIndex].querySelector('img');lightboxImage.src=img.currentSrc||img.src;lightboxImage.alt=img.alt;lightboxCaption.textContent=figures[photoIndex].querySelector('figcaption').textContent;lightboxCounter.textContent=(photoIndex+1)+' / '+figures.length}function movePhoto(d){photoIndex=(photoIndex+d+figures.length)%figures.length;updatePhoto()}document.getElementById('lightboxClose').addEventListener('click',()=>lightbox.close());document.getElementById('lightboxPrev').addEventListener('click',()=>movePhoto(-1));document.getElementById('lightboxNext').addEventListener('click',()=>movePhoto(1));lightbox.addEventListener('click',e=>{if(e.target===lightbox)lightbox.close()});lightbox.addEventListener('close',()=>{if(returnFocus&&returnFocus.focus)returnFocus.focus()});lightbox.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();movePhoto(-1)}if(e.key==='ArrowRight'){e.preventDefault();movePhoto(1)}});}})();
 </script>
