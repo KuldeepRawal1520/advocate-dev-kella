@@ -20,6 +20,7 @@
 ## Fragile areas / checks
 - All CSS and JavaScript are embedded in `index.html`; inspect script syntax and mobile media queries after edits.
 - Verify the WhatsApp URL and social/profile destinations remain intact.
+- Publication cards are fully clickable and keyboard accessible; clicks on existing source links retain their direct link behavior. Filter buttons must remain functional.
 - Publications page: check external source URLs, filter categories, mobile card layout, navigation links, and third-party/legal-record disclaimer.
 - Check hero portrait fit, gallery slide visibility and fade transition, Previous/Next and direct indicators, 3.5-second autoplay, hover/focus pause, and reduced-motion behaviour.
 - Review legal profile text and Bar Council of India compliance separately before public promotion.
