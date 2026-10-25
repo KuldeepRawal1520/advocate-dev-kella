@@ -127,7 +127,71 @@
  .gallery figure img{aspect-ratio:4/3}
  .lightbox{padding:52px 38px 25px}
 }
-\n</style>
+\n
+/* Final responsive polish */
+@media(max-width:800px){
+ .navin{height:auto;min-height:68px;align-items:center;gap:12px;padding-top:9px;padding-bottom:9px}
+ .brand{gap:8px;flex-shrink:0}.brand strong{font-size:17px;white-space:nowrap}.brand small{display:none}
+ .monogram{width:36px;height:40px;font-size:18px}
+ .links{min-width:0;flex:1;justify-content:flex-end;flex-wrap:wrap;gap:6px 11px}
+ .links a{font-size:11px;line-height:1.35}
+ .links a:nth-child(2){display:none}
+ .hero-slide .hero-grid{gap:14px;padding-top:28px;padding-bottom:88px}
+ .hero-slide .portrait{min-height:0;padding:15px 0 48px}
+ .hero-slide .portrait-frame{width:min(100%,320px);aspect-ratio:4/3}
+ .hero-slide .portrait-note{right:calc(50% - 150px);bottom:0;max-width:220px;padding:12px 15px}
+ .hero-slide .orbit{width:280px;height:280px}
+ .hero-slide h1{font-size:clamp(39px,7vw,50px);line-height:1.1}
+ .hero-slide .hero-copy{font-size:14px;line-height:1.65}
+ .hero-slide .hero-visual{height:230px}
+ .practice-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .practice-card{padding:22px 18px}
+ .practice-card h3{font-size:21px}
+ .practice-card ul{grid-template-columns:1fr;gap:7px}
+ .practice-card li{font-size:12px}
+ .gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto;gap:12px}
+ .gallery figure{display:flex;flex-direction:column;grid-row:auto!important;min-width:0;margin:0}
+ .gallery figure img{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;object-position:center;background:#f1efe9}
+ .gallery figcaption{position:static;background:#fff;color:var(--muted);padding:10px 11px;font-size:11px;line-height:1.45}
+ .footer-top{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+}
+@media(max-width:470px){
+ .wrap{width:calc(100% - 32px)}
+ .topline{font-size:9px;letter-spacing:.09em}
+ .navin{gap:7px}
+ .brand strong{font-size:15px}
+ .monogram{width:31px;height:36px;font-size:16px}
+ .links{gap:6px 8px}
+ .links a{font-size:10px}
+ .links a:nth-child(2){display:none}
+ .links a:nth-child(4){display:none}
+ .hero-slide .hero-grid{padding-top:22px;gap:11px}
+ .hero-slide .portrait{padding:10px 0 45px}
+ .hero-slide .portrait-frame{width:min(100%,290px);aspect-ratio:4/3}
+ .hero-slide .portrait-note{right:calc(50% - 140px);max-width:205px;font-size:10px}
+ .hero-slide .orbit{width:245px;height:245px}
+ .hero-slide h1{font-size:clamp(35px,9.8vw,43px);margin:16px 0}
+ .hero-slide .eyebrow{font-size:9px;letter-spacing:.14em}
+ .hero-slide .hero-copy{font-size:13px}
+ .hero-slide .hero-tags{gap:6px;margin:17px 0 21px}
+ .hero-slide .tag{font-size:9px;padding:6px 8px}
+ .hero-actions{gap:13px}
+ .button.gold{padding:11px 13px;font-size:10px}
+ .hero-controls{bottom:12px}
+ .practice-grid{grid-template-columns:1fr;gap:12px}
+ .practice-card{padding:22px}
+ .practice-card ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .gallery{grid-template-columns:1fr;gap:14px}
+ .gallery figure img{aspect-ratio:4/3;max-height:380px}
+ .gallery figcaption{font-size:12px;padding:11px 13px}
+ .footer-top{grid-template-columns:1fr;gap:25px}
+ .footer-social{gap:9px}
+ .disclaimer{padding:16px;font-size:12px;line-height:1.65}
+ .lightbox{width:100vw;max-height:100dvh;padding:52px 38px 25px;border:0}
+ .lightbox img{max-height:75vh}
+}
+
+</style>
 </head>
 <body>
 <div class="topline"><div class="wrap"><span>Professional profile · Ahmedabad, Gujarat</span><span>Advocate · High Court of Gujarat</span></div></div>
