@@ -27,3 +27,10 @@
 - Check hero portrait fit, all three hero slides, manual controls, 3-second autoplay, hover/focus pause, and reduced-motion behaviour.
 - Check photo grid responsiveness, lightbox image/caption, previous/next, Escape close, keyboard opening, and focus return.
 - Review legal profile text and Bar Council of India compliance separately before public promotion.
+
+
+## Mobile overflow and media notes
+- Added horizontal overflow safeguards and responsive heading sizes to both the homepage and Publications page.
+- Practice areas collapse to one column below 768px. Publications cards also collapse to one column on smaller screens.
+- Inspected homepage for Spotify embeds: none are present, so no Spotify iframe or lazy-loading attributes were added.
+- The source image directory includes several PNG photos around 1.6–2.0 MB. Converting these to WebP/AVIF should be handled as a separate binary-asset optimization step; current text-file editing workflow does not safely replace those binary files in-place.
