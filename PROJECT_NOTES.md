@@ -25,6 +25,7 @@
 - Publication cards are fully clickable and keyboard accessible; clicks on existing source links retain their direct link behavior. Filter buttons must remain functional.
 - Publications page: check external source URLs, filter categories, mobile card layout, navigation links, and third-party/legal-record disclaimer.
 - Check hero portrait fit, all three hero slides, manual controls, 3-second autoplay, hover/focus pause, and reduced-motion behaviour.
+- The photo gallery is positioned immediately after Practice Areas and before Leadership so visitors encounter the photos earlier in the homepage flow.
 - Check photo grid responsiveness, lightbox image/caption, previous/next, Escape close, keyboard opening, and focus return.
 - Review legal profile text and Bar Council of India compliance separately before public promotion.
 
