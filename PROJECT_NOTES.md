@@ -41,7 +41,5 @@
 - Vercel serves files in the repository's `public/` directory from the URL root. All homepage image URLs now use `/images/...` instead of `/public/images/...`; spaces are percent-encoded in the image URLs.
 - Added graceful fallbacks for failed gallery and hero images, including a DK monogram placeholder.
 - Added intrinsic responsive sizing rules for images and loading/error handling. Existing hero image remains high-priority; gallery images remain lazy-loaded.
+- Added required Name, Email, Practice Area, and Message fields with client-side validation. Submission composes the enquiry and opens WhatsApp for user review and sending. This is not an email backend; a real email submission requires a configured Formspree/Resend endpoint.
 - Added smooth active-section navigation highlighting using IntersectionObserver.
-
-## Contact section
-- The homepage contact section displays the existing public telephone, office address, and professional/social profile links. It intentionally has no enquiry form; visitors can use the listed contact details or the existing WhatsApp link in the footer.
