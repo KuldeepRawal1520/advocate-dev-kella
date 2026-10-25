@@ -228,6 +228,28 @@
 }
 @media(prefers-reduced-motion:reduce){.mobile-menu-toggle span,.practice-card ul{transition:none}}
 
+
+/* Mobile overflow and typography safeguards */
+html,body{max-width:100%;overflow-x:clip}
+img,video,iframe{max-width:100%}
+@media(max-width:768px){
+ h1{font-size:clamp(2rem,8.8vw,3.25rem);overflow-wrap:normal;hyphens:none}
+ h2{font-size:clamp(1.65rem,6.5vw,2.35rem);overflow-wrap:normal;hyphens:none}
+ h3{overflow-wrap:anywhere}
+ .wrap{width:calc(100% - 32px)}
+ .practice-grid{grid-template-columns:1fr}
+ .hero-slide .hero-grid{min-width:0}
+ .hero-slide .hero-grid>div{min-width:0}
+ .hero-slide h1{font-size:clamp(2.05rem,9.4vw,3rem);letter-spacing:-.025em}
+ .hero-slide .hero-copy{overflow-wrap:break-word}
+ .hero-slide .portrait-frame img{max-width:100%}
+}
+@media(max-width:390px){
+ h1{font-size:clamp(1.85rem,9vw,2.4rem)}
+ h2{font-size:clamp(1.5rem,7vw,1.9rem)}
+ .hero-slide h1{font-size:clamp(1.95rem,9vw,2.45rem)}
+}
+
 </style>
 </head>
 <body>
