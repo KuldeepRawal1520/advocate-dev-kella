@@ -9,7 +9,9 @@
 - Keep changes dependency-free and scoped to the single-page source.
 - Main navigation labels stay on one line on small screens.
 - External profile and contact links use clean text labels without decorative arrow glyphs.
-- The three supplied gallery images are shown one at a time in a 3D rotating slideshow with Previous/Next, direct slide indicators, a two-second interval, and a pause/play control.
+- The homepage hero uses the new professional barrister portrait from `public/images/Professional Barrister Portrait in Law Office.png`.
+- The gallery contains seven slides: three new speaking/event photographs, a new chambers portrait, the existing speaking photograph, and the two existing GHAA graphics. The 3D rotating slideshow retains Previous/Next, direct slide indicators, a two-second interval, and a pause/play control.
+- New gallery images use lazy loading and async decoding; the hero image is prioritized for loading.
 - Respect `prefers-reduced-motion` by disabling autoplay/animation where possible; pause autoplay while the gallery is hovered or focused.
 - WhatsApp remains a click-to-open link with a prefilled message. The visitor must send the message themselves.
 
