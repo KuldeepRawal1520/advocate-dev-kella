@@ -35,3 +35,11 @@
 - Practice areas collapse to one column below 768px. Publications cards also collapse to one column on smaller screens.
 - Inspected homepage for Spotify embeds: none are present, so no Spotify iframe or lazy-loading attributes were added.
 - The source image directory includes several PNG photos around 1.6–2.0 MB. Converting these to WebP/AVIF should be handled as a separate binary-asset optimization step; current text-file editing workflow does not safely replace those binary files in-place.
+
+
+## Image and contact form fixes
+- Vercel serves files in the repository's `public/` directory from the URL root. All homepage image URLs now use `/images/...` instead of `/public/images/...`; spaces are percent-encoded in the image URLs.
+- Added graceful fallbacks for failed gallery and hero images, including a DK monogram placeholder.
+- Added intrinsic responsive sizing rules for images and loading/error handling. Existing hero image remains high-priority; gallery images remain lazy-loaded.
+- Added required Name, Email, Practice Area, and Message fields with client-side validation. Submission composes the enquiry and opens WhatsApp for user review and sending. This is not an email backend; a real email submission requires a configured Formspree/Resend endpoint.
+- Added smooth active-section navigation highlighting using IntersectionObserver.
