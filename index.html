@@ -781,6 +781,92 @@ html,body{overflow-x:hidden;box-sizing:border-box}*,*::before,*::after{box-sizin
   }
 }
 
+
+/* Mobile-only hero polish: desktop, laptop and tablet styles are intentionally untouched. */
+@media (max-width: 600px) {
+  /* Keep the decorative lattice in a narrow edge rail so it never sits under copy. */
+  .hero-slide[data-hero-slide="0"]::before {
+    width: 22px;
+    opacity: .56;
+    background-size: 8px 8px, 16px 16px, 16px 16px, 1px 100%, 1px 100%;
+    background-position: 4px 5px, center center, center center, 4px 0, 20px 0;
+  }
+  .hero-slide[data-hero-slide="0"]::after {
+    opacity: .34;
+  }
+  .hero-slide .hero-grid {
+    position: relative;
+    z-index: 2;
+  }
+  .hero-slide .hero-grid > div:first-child {
+    position: relative;
+    isolation: isolate;
+    padding-left: 16px;
+    padding-right: 4px;
+  }
+  .hero-slide .hero-grid > div:first-child::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -18px -8px -20px -2px;
+    pointer-events: none;
+    background: linear-gradient(90deg,
+      rgba(7, 17, 30, .78) 0%,
+      rgba(7, 17, 30, .66) 55%,
+      rgba(7, 17, 30, .28) 82%,
+      rgba(7, 17, 30, 0) 100%);
+    border-radius: 2px;
+  }
+  /* Keep all three slide controls comfortable to tap on a phone. */
+  .hero-slide .hero-actions .button,
+  .hero-slide .hero-actions a,
+  .hero-slide .hero-tags .tag {
+    min-height: 44px;
+  }
+  .hero-slide .hero-actions {
+    position: relative;
+    z-index: 4;
+    gap: 10px 14px;
+  }
+  .hero-slide .hero-tags {
+    position: relative;
+    z-index: 4;
+    row-gap: 8px;
+  }
+  .hero-slide .hero-tags .tag {
+    display: inline-flex;
+    align-items: center;
+  }
+  .hero-carousel #heroPrev,
+  .hero-carousel #heroNext,
+  .hero-carousel #heroDots button {
+    min-width: 44px;
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+  .hero-carousel #heroCount {
+    position: relative;
+    z-index: 4;
+  }
+  /* On the courthouse slide, show the building/flag higher while preserving the image. */
+  .hero-slide-property {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .hero-slide-property .hero-grid > div:first-child::before {
+    background: linear-gradient(90deg,
+      rgba(5, 15, 28, .84) 0%,
+      rgba(5, 15, 28, .74) 48%,
+      rgba(5, 15, 28, .46) 78%,
+      rgba(5, 15, 28, .12) 100%);
+  }
+  /* Refine the Gujarat border on slide 3 into a slim, low-contrast gold rail. */
+  .hero-slide-property::before {
+    opacity: .52;
+  }
+}
+
 </style>
 </head>
 <body>
