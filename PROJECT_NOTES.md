@@ -59,3 +59,8 @@
 - Homepage hero slides 2 and 3 use CSS/SVG decorative scenes inspired by the user's Gujarat High Court reference: subtle Gujarat outline, Indian tricolor flag, architectural courthouse motif, warm dusk lighting, and justice-scale accents. Decorations are aria-hidden and purely presentational. Desktop and phone breakpoints are separately defined; no changes to slide 1 content, hero carousel behavior, navigation, or existing photos.
 
 - Refined homepage hero slides 2 and 3: replaced the CSS-box courthouse and tiny decorative mockups with detailed inline SVG scenes, using layered twilight skies, a more architectural High Court facade, lit windows/columns, Indian tricolor, Gujarat outline, justice scales, and subtle ground reflections. Inline SVG means no image asset upload or external dependency. Separate tablet and phone sizing/cropping rules are included. Preserve the existing text content, carousel logic, and slide 1.
+
+
+### Property hero background asset
+- Added `public/images/hero-property-court.svg` as a standalone illustrated background asset for slide 3, replacing the inline scene SVG in `index.html`.
+- The existing hero text, links, carousel controls, and slide 1/2 content remain untouched. The asset is rendered as a cover background in the slide 3 visual panel; verify crop and focus on desktop and phone widths after deployment.
