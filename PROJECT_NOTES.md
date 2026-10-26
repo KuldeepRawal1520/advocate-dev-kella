@@ -7,7 +7,7 @@
 - Vercel serves the repository root as a static site. No build step or framework is required.
 
 ## Decisions
-- Keep changes dependency-free and scoped to the single-page source.
+- Keep changes dependency-free and scoped to the static HTML/CSS/JavaScript site; the dedicated `cyber-law.html` page is the explicit approved exception to the single-page homepage.
 - On mobile, the full navigation is available through an accessible menu toggle, keeping Home, About, Practice Areas, Leadership, Publications, and Contact available without squeezing them into the header.
 - External profile and contact links use clean text labels without decorative arrow glyphs.
 - The homepage navigation links to `publications.html`; the publications page links back to homepage sections and labels its content as a selected reference list, not an exhaustive catalogue.
