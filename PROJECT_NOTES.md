@@ -64,3 +64,5 @@
 ### Property hero background asset
 - Added `public/images/hero-property-court.svg` as a standalone illustrated background asset for slide 3, replacing the inline scene SVG in `index.html`.
 - The existing hero text, links, carousel controls, and slide 1/2 content remain untouched. The asset is rendered as a cover background in the slide 3 visual panel; verify crop and focus on desktop and phone widths after deployment.
+
+- The property hero now uses the uploaded `public/images/Gujarat High Court at Twilight.png` background asset. In HTML, the URL is `/images/Gujarat%20High%20Court%20at%20Twilight.png`. This is used on slide 3 only; slide 1 and slide 2 remain unchanged.
