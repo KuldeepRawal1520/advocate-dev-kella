@@ -70,3 +70,10 @@
 - Follow-up fix: property hero background uses the exact uploaded image via its canonical GitHub raw asset URL because the local Vercel `/images/` path rendered as a broken image in production. Verify image loads and mobile framing after deploy.
 
 - Fixed hero slide artwork composition: slides 2 and 3 now position their visual layer across the full hero section instead of reserving a right-hand grid card. Existing text and buttons are layered above the background with dark contrast overlays. Desktop and phone breakpoints adjust crop, opacity, overlay, and slide height. Slide 2 uses its existing inline SVG scene as a full-bleed background; slide 3 uses the uploaded High Court image as a full-bleed background.
+
+
+### Full-bleed hero background correction (slides 2 and 3 only)
+- The previous visual element lived inside `.hero-grid`, which is the centered content container, so its image could not fill the viewport width. The updated rules apply the local `/images/Gujarat%20High%20Court%20at%20Twilight.png` asset directly to each full-width slide background, and hide only the separate visual panel on slides 2 and 3.
+- Both slides share the same image. Copy remains in the existing first grid column, left-aligned. Slide 1 is not targeted by these selectors.
+- Desktop overlay opacity: left edge 0.96, 34% 0.84, 65% 0.38, right edge 0.14; bottom gradient 0.45 fading to 0.08. At <=800px the vertical overlay is 0.95/0.87/0.54; at <=470px it is 0.97/0.90/0.62. Mobile image position is 62% and 64% respectively.
+- Carousel JavaScript and all controls are untouched.
