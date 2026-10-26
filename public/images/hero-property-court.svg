@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="Gujarat High Court at dusk with the Indian flag and Gujarat outline">
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#14253a"/><stop offset=".35" stop-color="#293c54"/><stop offset=".58" stop-color="#a46c48"/><stop offset=".73" stop-color="#e6ae70"/><stop offset="1" stop-color="#172538"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#ffd18a" stop-opacity=".85"/><stop offset="1" stop-color="#e7a15e" stop-opacity="0"/></radialGradient>
+ <linearGradient id="stone" x2="1"><stop stop-color="#444d59"/><stop offset=".22" stop-color="#9c9489"/><stop offset=".5" stop-color="#d2bda0"/><stop offset=".78" stop-color="#8c8277"/><stop offset="1" stop-color="#374658"/></linearGradient>
+ <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#1a2b40"/><stop offset=".55" stop-color="#d18c4c"/><stop offset="1" stop-color="#f7c779"/></linearGradient>
+ <linearGradient id="ground" x2="0" y2="1"><stop stop-color="#293546"/><stop offset="1" stop-color="#081522"/></linearGradient>
+ <pattern id="stonegrain" width="42" height="28" patternUnits="userSpaceOnUse"><path d="M0 27.5H42M21 0V27" stroke="#f5d9ac" stroke-opacity=".12" fill="none"/></pattern>
+ <g id="column"><rect width="34" height="174" fill="#d2b997"/><rect x="5" width="7" height="174" fill="#f6dfb5" opacity=".75"/><rect x="25" width="5" height="174" fill="#6f665e" opacity=".55"/><path d="M-5 0H39V10H-5ZM-5 164H39V174H-5Z" fill="#e4cfad"/></g>
+ <g id="flag"><path d="M0 0V105" stroke="#d6c6a8" stroke-width="3"/><path d="M2 4Q28 8 55 3V24Q28 29 2 24Z" fill="#e9823b"/><path d="M2 24Q28 29 55 24V45Q28 50 2 45Z" fill="#f8f5e9"/><path d="M2 45Q28 50 55 45V66Q28 71 2 66Z" fill="#23865b"/><circle cx="28" cy="35" r="4" fill="none" stroke="#233d72" stroke-width="1.5"/></g>
+</defs>
+<rect width="1200" height="760" fill="url(#sky)"/><ellipse cx="610" cy="420" rx="590" ry="300" fill="url(#glow)"/>
+<g fill="#0b1b2b" opacity=".72"><path d="M0 330 35 298 68 321 98 278 128 322 165 295 205 334 240 300 275 332 315 294 355 332V520H0Z"/><path d="M860 320 900 288 938 324 973 278 1007 316 1045 289 1082 322 1120 287 1160 326 1200 301V530H860Z"/></g>
+<g fill="none" stroke="#d4ad68" stroke-width="2.4" opacity=".74"><path d="M150 142 182 110 220 121 245 97 273 116 296 107 312 132 344 139 355 164 386 177 369 201 377 225 350 238 335 265 309 255 286 276 263 260 237 273 219 248 191 243 187 216 163 202 171 179 151 162Z"/><path d="M148 142 182 110 220 121 245 97 273 116 296 107 312 132 344 139 355 164 386 177 369 201 377 225 350 238 335 265 309 255 286 276 263 260 237 273 219 248 191 243 187 216 163 202 171 179 151 162Z" stroke="#f3c47c" stroke-width="6" opacity=".14"/></g>
+<g fill="none" stroke="#d5b06b" opacity=".35"><circle cx="915" cy="285" r="188"/><circle cx="915" cy="285" r="240"/><circle cx="915" cy="285" r="290"/><path d="M815 100Q925 165 1005 305T1190 495" stroke-width="2"/></g>
+<g stroke="#d5b06b" fill="none" opacity=".78" transform="translate(1030 95)"><path d="M0 15V108M-58 30H58M0 15 0 0M-58 30 0 8 58 30M-42 32Q-38 68 -20 68Q-3 68 0 32M0 32Q4 68 21 68Q39 68 42 32M-46 76H-8M8 76H46M0 108 -24 128H24Z" stroke-width="2"/></g>
+<g transform="translate(300 260)">
+ <path d="M-35 235 15 190H620L670 235V435H-35Z" fill="url(#stone)" stroke="#e3c79a" stroke-width="2"/>
+ <path d="M-55 190 292 78 690 190Z" fill="#8d8c89" stroke="#e7cda1" stroke-width="2.5"/>
+ <path d="M-30 188H665V224H-30Z" fill="#172a40" stroke="#d9b36f" stroke-width="2"/>
+ <text x="318" y="205" text-anchor="middle" font-family="serif" font-size="21" font-weight="bold" fill="#f4d69e">ગુજરાત હાઈકોર્ટ</text>
+ <text x="318" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" letter-spacing="2" fill="#f4d69e">GUJARAT HIGH COURT</text>
+ <g opacity=".95"><use href="#column" x="36" y="240"/><use href="#column" x="126" y="240"/><use href="#column" x="216" y="240"/><use href="#column" x="386" y="240"/><use href="#column" x="476" y="240"/><use href="#column" x="566" y="240"/></g>
+ <rect x="267" y="264" width="106" height="171" fill="#101c2a" stroke="#d7b77f" stroke-width="3"/><rect x="278" y="275" width="84" height="160" fill="url(#glass)"/>
+ <g stroke="#f4c27a" stroke-width="3" opacity=".7"><path d="M292 278V432M320 278V432M348 278V432M278 315H362M278 354H362M278 393H362"/></g>
+ <path d="M240 435H400L423 455H218Z" fill="#b6a184" stroke="#ead1a8" stroke-width="2"/><path d="M208 456H432V467H208ZM196 469H444V480H196Z" fill="#7d766f" stroke="#dfc69c"/>
+ <g fill="url(#glass)" stroke="#e9bf7b" stroke-width="2"><rect x="56" y="277" width="55" height="94"/><rect x="139" y="277" width="55" height="94"/><rect x="440" y="277" width="55" height="94"/><rect x="523" y="277" width="55" height="94"/></g>
+ <g stroke="#f3c77e" stroke-width="3" opacity=".65"><path d="M83 278V370M166 278V370M467 278V370M550 278V370"/></g>
+ <rect x="-35" y="190" width="705" height="290" fill="url(#stonegrain)" opacity=".6"/>
+</g>
+<use href="#flag" x="820" y="142"/>
+<path d="M0 610Q300 570 600 615T1200 600V760H0Z" fill="url(#ground)"/>
+<g opacity=".45" stroke="#f4bd73" stroke-width="2"><path d="M240 620 410 760M330 615 455 760M430 612 500 760M540 610 555 760M650 610 630 760M760 608 710 760M870 608 795 760M980 610 880 760M1090 610 965 760"/><path d="M0 680Q600 640 1200 680M0 720Q600 680 1200 720"/></g>
+<g fill="#f4bf72" opacity=".85"><circle cx="210" cy="592" r="5"/><circle cx="255" cy="604" r="4"/><circle cx="965" cy="589" r="5"/><circle cx="1035" cy="604" r="4"/><circle cx="1100" cy="580" r="4"/></g>
+</svg>
