@@ -66,3 +66,5 @@
 - The existing hero text, links, carousel controls, and slide 1/2 content remain untouched. The asset is rendered as a cover background in the slide 3 visual panel; verify crop and focus on desktop and phone widths after deployment.
 
 - The property hero now uses the uploaded `public/images/Gujarat High Court at Twilight.png` background asset. In HTML, the URL is `/images/Gujarat%20High%20Court%20at%20Twilight.png`. This is used on slide 3 only; slide 1 and slide 2 remain unchanged.
+
+- Follow-up fix: property hero background uses the exact uploaded image via its canonical GitHub raw asset URL because the local Vercel `/images/` path rendered as a broken image in production. Verify image loads and mobile framing after deploy.
