@@ -590,6 +590,45 @@ html,body{overflow-x:hidden;box-sizing:border-box}*,*::before,*::after{box-sizin
   }
 }
 
+
+/* Phase 2 preview: DATA LAW-inspired gold tech ornament on slide 2 only.
+   Keep the existing slide copy, layout, and carousel controls untouched. */
+.hero-slide-tech::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  opacity:1;
+  background-image:
+    radial-gradient(circle,rgba(212,169,79,.36) .9px,transparent 1.5px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 520' fill='none' stroke='%23D4A94F' stroke-width='1.5' stroke-linecap='round'%3E%3Cg transform='translate(260 260)' opacity='.82'%3E%3Ccircle r='224' stroke-opacity='.38'/%3E%3Ccircle r='202' stroke-dasharray='2 9' stroke-opacity='.62'/%3E%3Ccircle r='174' stroke-opacity='.52'/%3E%3Ccircle r='145' stroke-dasharray='3 8' stroke-opacity='.68'/%3E%3Ccircle r='112' stroke-opacity='.6'/%3E%3Ccircle r='76' stroke-dasharray='2 7' stroke-opacity='.75'/%3E%3Cpath d='M0-224V-174M0 174V224M-224 0H-174M174 0H224M-158-158l36 36M122 122l36 36M158-158l-36 36M-122 122l-36 36' stroke-opacity='.7'/%3E%3Crect x='-28' y='-22' width='56' height='44' rx='5'/%3E%3Cpath d='M-14-7h28M-14 2h18M-14 11h23'/%3E%3Ccircle cx='-112' cy='-2' r='17'/%3E%3Cpath d='M-120-2l6 6 11-13M112 0l13-13 13 13-13 13Z'/%3E%3Cpath d='M0-76v-29m-10 10 10-10 10 10M0 76v29m-10-10 10 10 10-10M-76 0h-29m10-10-10 10 10 10M76 0h29m-10-10 10 10-10 10' stroke-opacity='.7'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 700' fill='none' stroke='%23D4A94F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg opacity='.72'%3E%3Cpath d='M90 0V700M58 0V700M122 0V700' stroke-opacity='.38'/%3E%3Crect x='67' y='70' width='46' height='34' rx='4'/%3E%3Cpath d='M76 82h28M76 91h19M90 104v22m-13-7 13 7 13-7'/%3E%3Ccircle cx='90' cy='172' r='18'/%3E%3Cpath d='M81 172h18m-9-9v18M90 190v24m-12-8 12 8 12-8'/%3E%3Crect x='68' y='238' width='44' height='36' rx='4'/%3E%3Cpath d='M79 250l-7 6 7 6m22-12 7 6-7 6m-9-14-5 16'/%3E%3Cpath d='M90 274v27m-12-8 12 8 12-8'/%3E%3Ccircle cx='90' cy='352' r='18'/%3E%3Cpath d='M81 352l6 6 12-13M90 370v27m-12-8 12 8 12-8'/%3E%3Crect x='68' y='421' width='44' height='36' rx='4'/%3E%3Cpath d='M77 432h26m-26 9h18M90 457v25m-12-8 12 8 12-8'/%3E%3Ccircle cx='90' cy='534' r='18'/%3E%3Cpath d='M82 534h16m-8-8v16M90 552v25m-12-8 12 8 12-8'/%3E%3Cpath d='M58 630h64M58 646h64M58 662h64' stroke-opacity='.55'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:18px 18px,min(43vw,500px) min(43vw,500px),76px 100%;
+  background-position:0 0,right -60px top -44px,right 0 top;
+  background-repeat:repeat,no-repeat,repeat-y;
+  filter:drop-shadow(0 0 5px rgba(212,169,79,.22));
+  -webkit-mask-image:linear-gradient(90deg,#000 0%,#000 8%,transparent 27%,transparent 61%,#000 100%);
+  mask-image:linear-gradient(90deg,#000 0%,#000 8%,transparent 27%,transparent 61%,#000 100%);
+}
+@media(max-width:800px){
+  .hero-slide-tech::after{
+    background-size:18px 18px,310px 310px,52px 100%;
+    background-position:0 0,right -78px top -18px,right 0 top;
+    -webkit-mask-image:linear-gradient(90deg,#000 0%,transparent 22%,transparent 69%,#000 100%);
+    mask-image:linear-gradient(90deg,#000 0%,transparent 22%,transparent 69%,#000 100%);
+  }
+}
+@media(max-width:470px){
+  .hero-slide-tech::after{
+    opacity:.92;
+    background-size:20px 20px,220px 220px,38px 100%;
+    background-position:0 0,right -62px top -8px,right 0 top;
+    -webkit-mask-image:linear-gradient(90deg,#000 0%,transparent 20%,transparent 68%,#000 100%);
+    mask-image:linear-gradient(90deg,#000 0%,transparent 20%,transparent 68%,#000 100%);
+  }
+}
+
 </style>
 </head>
 <body>
