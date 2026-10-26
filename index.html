@@ -360,6 +360,58 @@ html,body{overflow-x:hidden;box-sizing:border-box}*,*::before,*::after{box-sizin
  .hero-slide-property .hero-visual .hero-property-bg{object-position:64% center;opacity:.4}
  .hero-slide-tech .hero-grid:before,.hero-slide-property .hero-grid:before{background:linear-gradient(180deg,#091727f5 0%,#0b192be8 48%,#0b192b7a 100%)}
 }
+
+/* Full-bleed courthouse background for slides 2 and 3 only.
+   Left overlay opacity: 0.96 at edge, 0.84 at 34%, 0.38 at 65%, 0.14 at right.
+   Lower overlay: 0.45 at bottom fading to 0.08 near the middle. */
+.hero-slide-tech,
+.hero-slide-property{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background-image:
+    linear-gradient(90deg,rgba(7,18,32,.96) 0%,rgba(7,18,32,.84) 34%,rgba(7,18,32,.38) 65%,rgba(7,18,32,.14) 100%),
+    linear-gradient(0deg,rgba(7,18,32,.45) 0%,rgba(7,18,32,.08) 55%,rgba(7,18,32,.08) 100%),
+    url("/images/Gujarat%20High%20Court%20at%20Twilight.png");
+  background-size:cover,cover,cover;
+  background-position:center,center,center;
+  background-repeat:no-repeat;
+}
+.hero-slide-tech .hero-grid,
+.hero-slide-property .hero-grid{
+  grid-template-columns:minmax(0,1fr);
+  position:relative;
+  z-index:1;
+}
+.hero-slide-tech .hero-grid>div:first-child,
+.hero-slide-property .hero-grid>div:first-child{
+  max-width:600px;
+}
+.hero-slide-tech .hero-visual,
+.hero-slide-property .hero-visual{
+  display:none!important;
+}
+@media(max-width:800px){
+  .hero-slide-tech,
+  .hero-slide-property{
+    background-position:center,center,62% center;
+    background-image:
+      linear-gradient(180deg,rgba(7,18,32,.95) 0%,rgba(7,18,32,.87) 45%,rgba(7,18,32,.54) 100%),
+      linear-gradient(90deg,rgba(7,18,32,.25),rgba(7,18,32,.08)),
+      url("/images/Gujarat%20High%20Court%20at%20Twilight.png");
+  }
+}
+@media(max-width:470px){
+  .hero-slide-tech,
+  .hero-slide-property{
+    background-position:center,center,64% center;
+    background-image:
+      linear-gradient(180deg,rgba(7,18,32,.97) 0%,rgba(7,18,32,.90) 48%,rgba(7,18,32,.62) 100%),
+      linear-gradient(90deg,rgba(7,18,32,.18),rgba(7,18,32,.04)),
+      url("/images/Gujarat%20High%20Court%20at%20Twilight.png");
+  }
+}
+
 </style>
 </head>
 <body>
