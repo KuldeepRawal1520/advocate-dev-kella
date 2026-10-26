@@ -53,3 +53,5 @@
 - Map behavior clarification: the visible official office address remains `B/4, Shrinath Apartment, Near Laxminarayan Bus Stand, Maninagar East, Ahmedabad, Gujarat 380008`. The embedded map and `Open address in Google Maps` link intentionally target the user-provided reference destination, Maninagar Char Rasta / Balvatika, Maninagar, Ahmedabad, Gujarat 380008, India.
 
 - Mobile-only hero portrait fix: at viewport widths up to 600px, the portrait frame uses a taller 3:4 aspect ratio and the image uses `object-fit: contain` to avoid cropping the advocate's head and body. Desktop and tablet rules are intentionally untouched. Verify at phone widths (320, 375, 390, 430px) and desktop before any future hero image changes.
+
+- Publication category filters use `data-filter` buttons and `card.hidden`; because `.card` sets `display:flex`, explicitly include `.card[hidden]{display:none!important}` so filtered cards are actually removed from the grid. Verify All references, Press coverage, Legal records, and Professional updates, including aria-pressed state.
