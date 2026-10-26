@@ -7,7 +7,7 @@
 - Vercel serves the repository root as a static site. No build step or framework is required.
 
 ## Decisions
-- Keep changes dependency-free and scoped to the single-page source.
+- Keep changes dependency-free and scoped to the static HTML/CSS/JavaScript site; the dedicated `cyber-law.html` page is the explicit approved exception to the single-page homepage.
 - On mobile, the full navigation is available through an accessible menu toggle, keeping Home, About, Practice Areas, Leadership, Publications, and Contact available without squeezing them into the header.
 - External profile and contact links use clean text labels without decorative arrow glyphs.
 - The homepage navigation links to `publications.html`; the publications page links back to homepage sections and labels its content as a selected reference list, not an exhaustive catalogue.
@@ -33,7 +33,7 @@
 ## Mobile overflow and media notes
 - Added horizontal overflow safeguards and responsive heading sizes to both the homepage and Publications page.
 - Practice areas collapse to one column below 768px. Publications cards also collapse to one column on smaller screens.
-- Inspected homepage for Spotify embeds: none are present, so no Spotify iframe or lazy-loading attributes were added.
+- Inspected homepage for Spotify embeds: none are present, so no Spotify iframe or lazy-loading attributes were added; do not add one without a specific user-provided media link.
 - The source image directory includes several PNG photos around 1.6–2.0 MB. Converting these to WebP/AVIF should be handled as a separate binary-asset optimization step; current text-file editing workflow does not safely replace those binary files in-place.
 
 
@@ -41,5 +41,5 @@
 - Vercel serves files in the repository's `public/` directory from the URL root. All homepage image URLs now use `/public/images/...` instead of `/public/public/images/...`; spaces are percent-encoded in the image URLs.
 - Added graceful fallbacks for failed gallery and hero images, including a DK monogram placeholder.
 - Added intrinsic responsive sizing rules for images and loading/error handling. Existing hero image remains high-priority; gallery images remain lazy-loaded.
-- Removed the contact enquiry form as requested. The contact section uses a styled WhatsApp contact card with icon, supporting text, and a direct link to the existing contact number.
+- Removed the contact enquiry form as requested. Keep it removed. The contact section uses a styled WhatsApp contact card with icon, supporting text, and a direct link to the existing contact number.
 - Added smooth active-section navigation highlighting using IntersectionObserver.
