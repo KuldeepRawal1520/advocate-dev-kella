@@ -43,3 +43,9 @@
 - Added intrinsic responsive sizing rules for images and loading/error handling. Existing hero image remains high-priority; gallery images remain lazy-loaded.
 - Removed the contact enquiry form as requested. Keep it removed. The contact section uses a styled WhatsApp contact card with icon, supporting text, and a direct link to the existing contact number.
 - Added smooth active-section navigation highlighting using IntersectionObserver.
+
+
+## Office map and social profile presentation
+- The contact map and its explicit Open address in Google Maps link both use the full office address string shown on the page. The address is still only as precise as the supplied address text; if the building pin is wrong, request a verified Google Maps place URL or pin before claiming exact rooftop accuracy.
+- Social profile links use inline SVG icons with subtle border/background treatment in the contact area and footer. No icon-font or third-party dependency is added.
+- The contact enquiry form remains removed.
