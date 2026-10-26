@@ -41,5 +41,5 @@
 - Vercel serves files in the repository's `public/` directory from the URL root. All homepage image URLs now use `/public/images/...` instead of `/public/public/images/...`; spaces are percent-encoded in the image URLs.
 - Added graceful fallbacks for failed gallery and hero images, including a DK monogram placeholder.
 - Added intrinsic responsive sizing rules for images and loading/error handling. Existing hero image remains high-priority; gallery images remain lazy-loaded.
-- Removed the contact enquiry form as requested. The contact section retains a single WhatsApp icon linking directly to the existing contact number.
+- Removed the contact enquiry form as requested. The contact section uses a styled WhatsApp contact card with icon, supporting text, and a direct link to the existing contact number.
 - Added smooth active-section navigation highlighting using IntersectionObserver.
