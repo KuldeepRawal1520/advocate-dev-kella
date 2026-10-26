@@ -55,3 +55,5 @@
 - Mobile-only hero portrait fix: at viewport widths up to 600px, the portrait frame uses a taller 3:4 aspect ratio and the image uses `object-fit: contain` to avoid cropping the advocate's head and body. Desktop and tablet rules are intentionally untouched. Verify at phone widths (320, 375, 390, 430px) and desktop before any future hero image changes.
 
 - Publication category filters use `data-filter` buttons and `card.hidden`; because `.card` sets `display:flex`, explicitly include `.card[hidden]{display:none!important}` so filtered cards are actually removed from the grid. Verify All references, Press coverage, Legal records, and Professional updates, including aria-pressed state.
+
+- Homepage hero slides 2 and 3 use CSS/SVG decorative scenes inspired by the user's Gujarat High Court reference: subtle Gujarat outline, Indian tricolor flag, architectural courthouse motif, warm dusk lighting, and justice-scale accents. Decorations are aria-hidden and purely presentational. Desktop and phone breakpoints are separately defined; no changes to slide 1 content, hero carousel behavior, navigation, or existing photos.
