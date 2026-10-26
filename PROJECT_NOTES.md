@@ -77,3 +77,9 @@
 - Both slides share the same image. Copy remains in the existing first grid column, left-aligned. Slide 1 is not targeted by these selectors.
 - Desktop overlay opacity: left edge 0.96, 34% 0.84, 65% 0.38, right edge 0.14; bottom gradient 0.45 fading to 0.08. At <=800px the vertical overlay is 0.95/0.87/0.54; at <=470px it is 0.97/0.90/0.62. Mobile image position is 62% and 64% respectively.
 - Carousel JavaScript and all controls are untouched.
+
+
+### Hero seam fix (slides 2 and 3)
+- Root cause: the gradient was attached to `.hero-grid:before`, which is constrained to the centered `.wrap` width. The slide also retained separate slide/section backgrounds, creating a visible vertical boundary and a bottom color transition.
+- The final override places the local courthouse image and dark gradients together on each full-width slide's `::before` layer. The centered grid and its pseudo-elements are explicitly transparent and border/shadow-free. The nested visual card is hidden on slides 2 and 3 only. Slide 1 and carousel JavaScript remain untouched.
+- Desktop gradient opacity stops are 0.88 at the left edge, 0.76 at 28%, 0.43 at 55%, and 0.18 at the right edge; a secondary bottom gradient goes from 0.28 at the bottom to 0.04 at 38%. Mobile uses a vertical overlay (0.90/0.76/0.42 at <=800px; 0.93/0.81/0.48 at <=470px). The image uses cover sizing and responsive 62%/64% horizontal positioning on mobile.
