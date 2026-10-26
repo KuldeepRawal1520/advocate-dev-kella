@@ -412,6 +412,87 @@ html,body{overflow-x:hidden;box-sizing:border-box}*,*::before,*::after{box-sizin
   }
 }
 
+
+/* FINAL seam fix: the only artwork/overlay layer for slides 2 and 3 is the full-slide ::before.
+   This deliberately bypasses the centered .wrap/.hero-grid so it cannot create a vertical seam. */
+.hero-slide-tech,
+.hero-slide-property{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:transparent!important;
+}
+.hero-slide-tech::before,
+.hero-slide-property::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(90deg,rgba(7,18,32,.88) 0%,rgba(7,18,32,.76) 28%,rgba(7,18,32,.43) 55%,rgba(7,18,32,.18) 100%),
+    linear-gradient(0deg,rgba(7,18,32,.28) 0%,rgba(7,18,32,.04) 38%,rgba(7,18,32,.08) 100%),
+    url("/images/Gujarat%20High%20Court%20at%20Twilight.png");
+  background-size:cover,cover,cover;
+  background-position:center,center,center;
+  background-repeat:no-repeat;
+  opacity:1;
+}
+.hero-slide-tech .hero-grid,
+.hero-slide-property .hero-grid{
+  position:relative;
+  z-index:1;
+  background:transparent!important;
+  box-shadow:none!important;
+  border:0!important;
+  outline:0!important;
+}
+.hero-slide-tech .hero-grid::before,
+.hero-slide-tech .hero-grid::after,
+.hero-slide-property .hero-grid::before,
+.hero-slide-property .hero-grid::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+  box-shadow:none!important;
+  border:0!important;
+  outline:0!important;
+}
+.hero-slide-tech .hero-visual,
+.hero-slide-property .hero-visual{
+  display:none!important;
+}
+.hero-slide-tech,
+.hero-slide-property,
+.hero-slide-tech .hero-grid,
+.hero-slide-property .hero-grid{
+  box-shadow:none!important;
+  border:0!important;
+  outline:0!important;
+}
+@media(max-width:800px){
+  .hero-slide-tech::before,
+  .hero-slide-property::before{
+    background-image:
+      linear-gradient(180deg,rgba(7,18,32,.90) 0%,rgba(7,18,32,.76) 48%,rgba(7,18,32,.42) 100%),
+      linear-gradient(90deg,rgba(7,18,32,.12),rgba(7,18,32,.03)),
+      url("/images/Gujarat%20High%20Court%20at%20Twilight.png");
+    background-position:center,center,62% center;
+    background-size:cover,cover,cover;
+  }
+}
+@media(max-width:470px){
+  .hero-slide-tech::before,
+  .hero-slide-property::before{
+    background-image:
+      linear-gradient(180deg,rgba(7,18,32,.93) 0%,rgba(7,18,32,.81) 48%,rgba(7,18,32,.48) 100%),
+      linear-gradient(90deg,rgba(7,18,32,.08),rgba(7,18,32,.02)),
+      url("/images/Gujarat%20High%20Court%20at%20Twilight.png");
+    background-position:center,center,64% center;
+    background-size:cover,cover,cover;
+  }
+}
+
 </style>
 </head>
 <body>
