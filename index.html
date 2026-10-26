@@ -537,6 +537,59 @@ html,body{overflow-x:hidden;box-sizing:border-box}*,*::before,*::after{box-sizin
   }
 }
 
+
+/* Phase 1 refinement: brighter, balanced gold ornament on slide 3 only.
+   These layers sit above the existing courthouse background and below slide copy. */
+.hero-slide-property::before{
+  background-image:
+    linear-gradient(90deg,rgba(7,18,32,.78) 0%,rgba(7,18,32,.68) 27%,rgba(7,18,32,.34) 53%,rgba(7,18,32,.12) 100%),
+    linear-gradient(0deg,rgba(7,18,32,.22) 0%,rgba(7,18,32,.04) 45%,rgba(7,18,32,.03) 100%),
+    url("/images/Gujarat%20High%20Court%20at%20Twilight.png");
+  background-size:cover,cover,cover;
+  background-position:center,center,center;
+  background-repeat:no-repeat;
+}
+.hero-slide-property::after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:1;
+  background-image:
+    radial-gradient(circle,rgba(212,169,79,.38) 1px,transparent 1.45px),
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2076%20900%22%20fill%3D%22none%22%20stroke%3D%22%23D4A94F%22%20stroke-width%3D%221.7%22%3E%3Cpath%20d%3D%22M38%200V900M16%200V900M60%200V900%22%20stroke-opacity%3D%22.52%22%2F%3E%3Cpath%20d%3D%22M16%200H60M16%20900H60%22%20stroke-opacity%3D%22.65%22%2F%3E%3Cg%20stroke-opacity%3D%22.7%22%3E%3Cpath%20d%3D%22M38%207l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%2020h22M38%2020h22%22%2F%3E%3Cpath%20d%3D%22M38%2047l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%2060h22M38%2060h22%22%2F%3E%3Cpath%20d%3D%22M38%2087l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20100h22M38%20100h22%22%2F%3E%3Cpath%20d%3D%22M38%20127l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20140h22M38%20140h22%22%2F%3E%3Cpath%20d%3D%22M38%20167l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20180h22M38%20180h22%22%2F%3E%3Cpath%20d%3D%22M38%20207l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20220h22M38%20220h22%22%2F%3E%3Cpath%20d%3D%22M38%20247l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20260h22M38%20260h22%22%2F%3E%3Cpath%20d%3D%22M38%20287l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20300h22M38%20300h22%22%2F%3E%3Cpath%20d%3D%22M38%20327l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20340h22M38%20340h22%22%2F%3E%3Cpath%20d%3D%22M38%20367l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20380h22M38%20380h22%22%2F%3E%3Cpath%20d%3D%22M38%20407l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20420h22M38%20420h22%22%2F%3E%3Cpath%20d%3D%22M38%20447l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20460h22M38%20460h22%22%2F%3E%3Cpath%20d%3D%22M38%20487l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20500h22M38%20500h22%22%2F%3E%3Cpath%20d%3D%22M38%20527l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20540h22M38%20540h22%22%2F%3E%3Cpath%20d%3D%22M38%20567l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20580h22M38%20580h22%22%2F%3E%3Cpath%20d%3D%22M38%20607l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20620h22M38%20620h22%22%2F%3E%3Cpath%20d%3D%22M38%20647l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20660h22M38%20660h22%22%2F%3E%3Cpath%20d%3D%22M38%20687l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20700h22M38%20700h22%22%2F%3E%3Cpath%20d%3D%22M38%20727l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20740h22M38%20740h22%22%2F%3E%3Cpath%20d%3D%22M38%20767l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20780h22M38%20780h22%22%2F%3E%3Cpath%20d%3D%22M38%20807l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20820h22M38%20820h22%22%2F%3E%3Cpath%20d%3D%22M38%20847l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20860h22M38%20860h22%22%2F%3E%3Cpath%20d%3D%22M38%20887l13%2013-13%2013-13-13Z%22%2F%3E%3Cpath%20d%3D%22M16%20900h22M38%20900h22%22%2F%3E%3C%2Fg%3E%3Cg%20stroke-opacity%3D%22.5%22%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%2220%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%2260%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22100%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22140%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22180%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22220%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22260%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22300%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22340%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22380%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22420%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22460%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22500%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22540%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22580%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22620%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22660%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22700%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22740%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22780%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22820%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22860%22%20r%3D%222.2%22%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%22900%22%20r%3D%222.2%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"),
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20fill%3D%22none%22%20stroke%3D%22%23D4A94F%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cdefs%3E%3Cfilter%20id%3D%22g%22%20x%3D%22-280%22%20y%3D%22-280%22%20width%3D%22560%22%20height%3D%22560%22%3E%3CfeGaussianBlur%20stdDeviation%3D%222.5%22%20result%3D%22b%22%2F%3E%3CfeMerge%3E%3CfeMergeNode%20in%3D%22b%22%2F%3E%3CfeMergeNode%20in%3D%22SourceGraphic%22%2F%3E%3C%2FfeMerge%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg%20filter%3D%22url(%23g)%22%20opacity%3D%22.86%22%20transform%3D%22translate(250%20250)%22%3E%3Ccircle%20r%3D%22220%22%20stroke-opacity%3D%22.46%22%2F%3E%3Ccircle%20r%3D%22202%22%20stroke-opacity%3D%22.55%22%20stroke-dasharray%3D%222%208%22%2F%3E%3Ccircle%20r%3D%22175%22%20stroke-opacity%3D%22.62%22%2F%3E%3Ccircle%20r%3D%22143%22%20stroke-opacity%3D%22.5%22%20stroke-dasharray%3D%222%207%22%2F%3E%3Ccircle%20r%3D%22112%22%20stroke-opacity%3D%22.68%22%2F%3E%3Cpath%20d%3D%22M112.00%200.00Q162.60%2021.41%20108.18%2028.99M108.18%2028.99Q151.52%2062.76%2096.99%2056.00M96.99%2056.00Q130.11%2099.84%2079.20%2079.20M79.20%2079.20Q99.84%20130.11%2056.00%2096.99M56.00%2096.99Q62.76%20151.52%2028.99%20108.18M28.99%20108.18Q21.41%20162.60%200.00%20112.00M0.00%20112.00Q-21.41%20162.60%20-28.99%20108.18M-28.99%20108.18Q-62.76%20151.52%20-56.00%2096.99M-56.00%2096.99Q-99.84%20130.11%20-79.20%2079.20M-79.20%2079.20Q-130.11%2099.84%20-96.99%2056.00M-96.99%2056.00Q-151.52%2062.76%20-108.18%2028.99M-108.18%2028.99Q-162.60%2021.41%20-112.00%200.00M-112.00%200.00Q-162.60%20-21.41%20-108.18%20-28.99M-108.18%20-28.99Q-151.52%20-62.76%20-96.99%20-56.00M-96.99%20-56.00Q-130.11%20-99.84%20-79.20%20-79.20M-79.20%20-79.20Q-99.84%20-130.11%20-56.00%20-96.99M-56.00%20-96.99Q-62.76%20-151.52%20-28.99%20-108.18M-28.99%20-108.18Q-21.41%20-162.60%20-0.00%20-112.00M-0.00%20-112.00Q21.41%20-162.60%2028.99%20-108.18M28.99%20-108.18Q62.76%20-151.52%2056.00%20-96.99M56.00%20-96.99Q99.84%20-130.11%2079.20%20-79.20M79.20%20-79.20Q130.11%20-99.84%2096.99%20-56.00M96.99%20-56.00Q151.52%20-62.76%20108.18%20-28.99M108.18%20-28.99Q162.60%20-21.41%20112.00%20-0.00%22%20stroke-opacity%3D%22.76%22%2F%3E%3Cpath%20d%3D%22M0-188%2019-133%2072-174%2067-115%20115-115%20100-67%20174-72%20133-19%20188%200%20133%2019%20174%2072%20115%2067%20115%20115%2067%20100%2072%20174%2019%20133%200%20188-19%20133-72%20174-67%20115-115%20115-100%2067-174%2072-133%2019-188%200-133-19-174-72-115-67-115-115-67-100-72-174-19-133Z%22%20stroke-opacity%3D%22.78%22%2F%3E%3Cpath%20d%3D%22M0-92%2024-24%2092%200%2024%2024%200%2092-24%2024-92%200-24-24Z%22%2F%3E%3Ccircle%20r%3D%2217%22%2F%3E%3Ccircle%20r%3D%226%22%20fill%3D%22%23D4A94F%22%20fill-opacity%3D%22.48%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"),
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20220%20220%22%20fill%3D%22none%22%20stroke%3D%22%23D4A94F%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%3E%3Cg%20transform%3D%22translate(110%20110)%22%20opacity%3D%22.78%22%3E%3Ccircle%20r%3D%2296%22%20stroke-opacity%3D%22.48%22%2F%3E%3Ccircle%20r%3D%2282%22%20stroke-dasharray%3D%222%206%22%20stroke-opacity%3D%22.62%22%2F%3E%3Ccircle%20r%3D%2262%22%20stroke-opacity%3D%22.7%22%2F%3E%3Cpath%20d%3D%22M42.00%200.00Q72.58%2014.44%2038.80%2016.07M38.80%2016.07Q61.53%2041.11%2029.70%2029.70M29.70%2029.70Q41.11%2061.53%2016.07%2038.80M16.07%2038.80Q14.44%2072.58%200.00%2042.00M0.00%2042.00Q-14.44%2072.58%20-16.07%2038.80M-16.07%2038.80Q-41.11%2061.53%20-29.70%2029.70M-29.70%2029.70Q-61.53%2041.11%20-38.80%2016.07M-38.80%2016.07Q-72.58%2014.44%20-42.00%200.00M-42.00%200.00Q-72.58%20-14.44%20-38.80%20-16.07M-38.80%20-16.07Q-61.53%20-41.11%20-29.70%20-29.70M-29.70%20-29.70Q-41.11%20-61.53%20-16.07%20-38.80M-16.07%20-38.80Q-14.44%20-72.58%20-0.00%20-42.00M-0.00%20-42.00Q14.44%20-72.58%2016.07%20-38.80M16.07%20-38.80Q41.11%20-61.53%2029.70%20-29.70M29.70%20-29.70Q61.53%20-41.11%2038.80%20-16.07M38.80%20-16.07Q72.58%20-14.44%2042.00%20-0.00%22%2F%3E%3Cpath%20d%3D%22M0-46%2012-12%2046%200%2012%2012%200%2046-12%2012-46%200-12-12Z%22%2F%3E%3Ccircle%20r%3D%227%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-size:18px 18px,76px 100%,min(44vw,510px) min(44vw,510px),min(19vw,220px) min(19vw,220px);
+  background-position:0 0,left top,right -54px top -48px,right -16px bottom -24px;
+  background-repeat:repeat,repeat-y,no-repeat,no-repeat;
+  filter:drop-shadow(0 0 5px rgba(212,169,79,.24));
+  -webkit-mask-image:linear-gradient(90deg,#000 0%,#000 9%,transparent 25%,transparent 61%,#000 100%);
+  mask-image:linear-gradient(90deg,#000 0%,#000 9%,transparent 25%,transparent 61%,#000 100%);
+}
+.hero-slide-property .hero-grid{z-index:2}
+.hero-slide-property .hero-grid>div:first-child{z-index:3}
+@media(max-width:800px){
+  .hero-slide-property::before{
+    background-image:linear-gradient(180deg,rgba(7,18,32,.86) 0%,rgba(7,18,32,.68) 48%,rgba(7,18,32,.34) 100%),linear-gradient(90deg,rgba(7,18,32,.12),rgba(7,18,32,.03)),url("/images/Gujarat%20High%20Court%20at%20Twilight.png");
+    background-position:center,center,62% center;background-size:cover,cover,cover;
+  }
+  .hero-slide-property::after{
+    background-size:18px 18px,58px 100%,300px 300px,140px 140px;
+    background-position:0 0,left top,right -68px top -20px,right -28px bottom -14px;
+    -webkit-mask-image:linear-gradient(90deg,#000 0%,transparent 22%,transparent 70%,#000 100%);
+    mask-image:linear-gradient(90deg,#000 0%,transparent 22%,transparent 70%,#000 100%);
+  }
+}
+@media(max-width:470px){
+  .hero-slide-property::before{
+    background-image:linear-gradient(180deg,rgba(7,18,32,.91) 0%,rgba(7,18,32,.78) 48%,rgba(7,18,32,.46) 100%),linear-gradient(90deg,rgba(7,18,32,.08),rgba(7,18,32,.02)),url("/images/Gujarat%20High%20Court%20at%20Twilight.png");
+    background-position:center,center,64% center;background-size:cover,cover,cover;
+  }
+  .hero-slide-property::after{
+    background-size:20px 20px,42px 100%,205px 205px,100px 100px;
+    background-position:0 0,left top,right -55px top -12px,right -18px bottom -8px;
+    -webkit-mask-image:linear-gradient(90deg,#000 0%,transparent 20%,transparent 68%,#000 100%);
+    mask-image:linear-gradient(90deg,#000 0%,transparent 20%,transparent 68%,#000 100%);
+  }
+}
+
 </style>
 </head>
 <body>
